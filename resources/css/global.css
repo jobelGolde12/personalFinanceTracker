@@ -1,0 +1,24 @@
+.pointer{
+    cursor: pointer;
+}
+:root{
+    --hover-primary: darkorange;
+    --color-secondary: #333;
+    --color-primary: #fff;
+    --color-tri: darkorange;
+    --bg-primary: #f5f5f5;
+}
+.gray{
+    color: gray;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.text-fff{
+    color: var(--color-primary);
+}
+.hover:hover, .text-fff:hover{
+    color: var(--hover-primary);
+}
