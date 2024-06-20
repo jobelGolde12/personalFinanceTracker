@@ -17,8 +17,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
+        'username',
         'password',
     ];
 
@@ -32,6 +32,9 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
     /**
      * Get the attributes that should be cast.
      *
