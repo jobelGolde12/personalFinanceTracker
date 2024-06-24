@@ -1,0 +1,36 @@
+.category .category-logo i{
+    border-radius: 3px;
+}
+.category-container {
+    position: absolute;
+    max-height: 40%;
+    overflow-y: auto;
+    width: 80%;
+}
+.category-container .category:hover{
+    background: rgba(0,0,0,.1);
+}
+.category-container::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.category-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.category-container::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+.category-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.profile-container{
+    position: relative;
+    width: 80%;
+}
+.profile-container img{
+    width: 50px;
+    height: 50px;
+}

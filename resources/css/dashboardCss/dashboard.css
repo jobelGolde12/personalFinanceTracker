@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
 }
 .dashboard-main-container .left{
     position: relative;
@@ -14,13 +15,11 @@
     position: relative;
     width: 55%;
     height: 100%;
-    background: red;
 }
 .dashboard-main-container .right{
     position: relative;
     width: 30%;
     height: 100%;
-    background: #ccc;
 }
 @media screen and (max-width: 900px){
     .dashboard-main-container .right{

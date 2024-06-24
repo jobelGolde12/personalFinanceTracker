@@ -1,7 +1,5 @@
-/* .center-header .container button{
-    position: relative;
-    transform: translateX(250%);
-} */
+
+
 .center-body .card .container img{
     width: 90%;
     left: 10%;
@@ -10,6 +8,7 @@
 }
 .center-body .card{
     max-height: 130px;
+    border: none;
 }
 .center-body .card .container h5{
     font-size: 1.2rem;
@@ -20,9 +19,21 @@
 .container div .bi-list{
     display: none;
 }
-.main-container-left .container1, .main-container-left .container2{
-    max-width: 350px;
-    max-height: 400px;
+.main-container{
+    overflow-y: scroll;
+    position: relative;
+    
+    width: 100%;
+}
+.button-action{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    cursor: pointer;
+    border: none;
+    color: var(--color-primary);
+
 }
 @media screen and (max-width: 750px){
     .center-header .container button{

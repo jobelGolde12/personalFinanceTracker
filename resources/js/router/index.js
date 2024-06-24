@@ -30,6 +30,16 @@ const routes = [
         path: '/center',
         name: 'center',
         component: () => import('../components/dashboardFolder/Center.vue')
+    },
+    {
+        path: '/right',
+        name: 'right',
+        component: () => import('../components/dashboardFolder/Right.vue')
+    },
+    {
+        path: '/loading',
+        name: 'loading',
+        component: () => import('../components/Loading.vue')
     }
 ];
 

@@ -1,5 +1,7 @@
     <template>
         <div class="login-body bg-light d-flex justify-content-center align-items-center">
+
+            
             <form @submit.prevent="submitForm" class="form">
                 <h4 class="text-dark fw-normal text-center">Signup</h4>
 
@@ -37,10 +39,17 @@
         
                 
             </form>
+
+
+
+
+            <!-- This is execute when preparing the signup  -->
+             <Loading v-if="loading"/>
         </div>
         </template>
         
         <script>
+        import Loading from '../Loading.vue';
         export default {
             name: 'signup',
             data(){
@@ -48,8 +57,12 @@
                     toggleEye: false,
                     email: '',
                     username: '',
-                    password: ''
+                    password: '',
+                    loading: false
                 }
+            },
+            components: {
+                Loading
             },
             methods: {
                 toggleEyeFunc(){
@@ -106,14 +119,34 @@
                         },
                         body: JSON.stringify(data)
                     })
-                    const fetchData = res.json
+                    const fetchData = await res.json
                     console.log(fetchData)
-                    this.$router.push('/dashboard')
+                    console.log('Signup success')
+                    this.$router.push('/login')
                    }catch(err){
-                    console.log(err)
+                    console.log('An Error Occured ' + err)
                    }
                     
+                },
+                fetchUser(){
+                    fetch('http://127.0.0.1:8000/api/getUser',{
+                        headers: {
+                            withCredentials: true
+                        }
+                    })
+                    .then(res =>{
+                        return res.json()
+                    })
+                    .then(data =>{
+                        console.log('This is the fucking data: ' + data)
+                    })
+                    .catch(err =>{
+                        console.log('fetching data error ' + err)
+                    })
                 }
+            },
+            mounted(){
+                this.fetchUser()
             }
         }
         </script>
