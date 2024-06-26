@@ -1,7 +1,9 @@
 <template>
     <div class="dashboard-main-container">
         <leftComponent class="left bg-light" />
-        <centerComponent class="center bg-light" />
+        <div class="center bg-light">
+            <router-view></router-view>
+        </div>
         <rightComponent class="right"/>
     </div>
 </template>

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <router-view></router-view>
+        <h1>This is the profile</h1>
     </div>
 </template>
 <script>
 export default{
-    name: 'center'
+    name: 'profile'
 }
 </script>

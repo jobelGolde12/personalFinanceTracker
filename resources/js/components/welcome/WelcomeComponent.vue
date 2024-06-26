@@ -149,8 +149,7 @@
 
         <div class="container mt-5">
             <p class="text-muted">
-                Certainly! Here's a 150-word description for the features section
-                without using a list: Our Personal Finance Tracker is designed to
+                 Our Personal Finance Tracker is designed to
                 empower you with comprehensive tools to manage your finances
                 effectively. With our intuitive budget management feature, you can
                 create and maintain a budget tailored to your needs, ensuring you

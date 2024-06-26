@@ -2,6 +2,10 @@
 .left-body .link{
     border-radius: 20px 0 0 20px;
     margin-left: .5 rem;
+
+}
+.left-body .link .text-decoration-none{
+    font-size: .9rem;
 }
 .left-body .link:hover{
     background: rgba(0, 0, 0, .1);

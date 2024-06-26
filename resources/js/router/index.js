@@ -19,7 +19,34 @@ const routes = [
     {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('../components/dashboardFolder/DashboardComponent.vue')
+        component: () => import('../components/dashboardFolder/DashboardComponent.vue'),
+        children: [
+            {
+                path: '',
+                name: 'home',
+                component: () => import('../components/dashboardFolder/centerContent/Home.vue')
+            },
+            {
+                path: '/networth',
+                name: 'networth',
+                component: () => import('../components/dashboardFolder/centerContent/Networth.vue')
+            },
+            {
+                path: '/profile',
+                name: 'profile',
+                component: () => import('../components/dashboardFolder/centerContent/Profile.vue')
+            },
+            {
+                path: '/addTransaction',
+                name: 'addTransaction',
+                component: () => import('../components/dashboardFolder/centerContent/AddTransaction.vue')
+            },
+            {
+                path: '/viewTransaction:index',
+                name: 'viewTransaction',
+                component: () => import('../components/dashboardFolder/centerContent/ViewTransaction.vue')
+            }
+        ]
     },
     {
         path: '/left',
