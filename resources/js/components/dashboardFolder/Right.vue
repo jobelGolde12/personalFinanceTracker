@@ -10,13 +10,13 @@
 
         <div class="category-container p-0 bg-light p-2" style="max-height: 35%; overflow-y: auto;">
             <h5 class="text-dark text-dark fw-light">Categories</h5>
-            <div class="category p-2 d-flex flex-row align-items-center pointer" v-for="data in categoriesData" :key="data.id">
+            <div class="category d-flex flex-row align-items-center pointer" v-for="data in categoriesData" :key="data.id">
                 <div class="category-logo">
-                    <i class="bme-2 text-success px-2 py-1 fs-5 fw-normal me-2" :class="data.logo"></i>
+                    <i class="text-success px-2 py-1 fw-normal me-2" :class="data.logo"></i>
                 </div>
 
-                <div class="category-name pt-2 flex-grow-1">
-                    <h5 class="text-dark fw-normal">{{ data.name }}</h5>
+                <div class="category-name pt-3 flex-grow-1">
+                    <p class="text-dark fw-normal">{{ data.name }}</p>
                 </div>
 
                 <div class="action ms-auto d-flex justify-content-end">

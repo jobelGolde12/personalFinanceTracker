@@ -8,14 +8,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
 
+
 class UserController extends Controller
 {
     public function store(Request $request)
     {
         $data = $request->validate([
             'email' => 'required|email|unique:users,email',
-            'username' => 'required|unique:users,username',
-            'password' => 'required|min:9',
+            'name' => 'required|unique:users,name',
+            'password' => 'required|min:8',
         ]);
 
         $data['password'] = Hash::make($data['password']);
@@ -28,16 +29,25 @@ class UserController extends Controller
         {
             try {
                 $credentials = $request->validate([
-                    'username' => 'required|string',
+                    'name' => 'required|string',
                     'password' => 'required|string',
                 ]);
 
                 if (Auth::attempt($credentials)) {
                     $user = Auth::user();
-                    $token = $user->createToken('LaravelAuthApp')->plainTextToken;
+                    
+                    
+                    if ($user) {
+                $token = $user->createToken('LaravelAuthApp')->plainTextToken;
+                Log::info('User ID: ' . $user->id);
 
-                    $cookie = Cookie::make('token', $token, 60);
-                    return response()->json(['token' => $token, 'message' => 'Login successful', 'user' => $user], 200)->cookie($cookie);
+                
+                $cookie = Cookie::make('token', $token, 60);
+                return response()->json(['token' => $token, 'message' => 'Login successful', 'user' => $user], 200)->cookie($cookie);
+                } else {
+                    return response()->json(['message' => 'User not found'], 404);
+                }
+
                 } else {
                     return response()->json(['message' => 'Invalid credentials'], 401);
                 }

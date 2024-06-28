@@ -15,11 +15,12 @@
 }
 
 .category-container::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: rgba(0,0,0,.1); 
+    border-radius: 5px;
 }
 
 .category-container::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: var(--bg-4); 
     border-radius: 10px;
 }
 

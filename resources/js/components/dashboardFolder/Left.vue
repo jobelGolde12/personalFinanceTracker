@@ -8,47 +8,37 @@
 
         <div class="left-body mt-5">
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="/dashboard/" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-house-fill fs-5"></i>
+            
+                <router-link to="/dashboard/" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-house-fill fs-5 color-4"></i>
                     Home
                 </router-link>
-            </div>
+            
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="/netWorth" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-reception-4 fs-5"></i> 
+                <router-link to="/netWorth" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-reception-4 fs-5 color-4"></i> 
                     Networth
                 </router-link>
-            </div>
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-bell-fill fs-5"></i>
+                <router-link to="" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-bell-fill fs-5 color-4"></i>
                     notification
                 </router-link>
-            </div>
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-person-fill fs-5"></i>
+                <router-link to="" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-person-fill fs-5 color-4"></i>
                     Profile 
                 </router-link>
-            </div>
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-gear-fill fs-5"></i>
+                <router-link to="" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-gear-fill fs-5 color-4"></i>
                     Settings
                 </router-link>
-            </div>
 
-            <div class="link link1 bg- p-2 mb-2">
-                <router-link to="" class="text-decoration-none text-dark text-uppercase">
-                    <i class="bi bi-info-circle-fill fs-5"></i>
+                <router-link to="" class="text-decoration-none text-dark text-uppercase p-2 mb-2">
+                    <i class="bi bi-info-circle-fill fs-5 color-4"></i>
                     About
                 </router-link>
-            </div>
         </div>
     </div>
 </template>

@@ -12,7 +12,7 @@
         <h4 class="text-dark fw-normal text-center">Login</h4>
         <div class="input-group mb-2">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" v-model="formData.username" required/>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" v-model="formData.name" required/>
         </div>
 
         <div class="input-group mb-3">
@@ -47,7 +47,7 @@ export default {
         return {
             toggleEye: false,
             formData: {
-                username: "",
+                name: "",
                 password: "",
             },
             fetching: false,
@@ -74,7 +74,7 @@ export default {
             }
         },
         async loginFunc() {
-            if(this.formData.username !== '' || this.formData.password !== ''){
+            if(this.formData.name !== '' || this.formData.password !== ''){
             this.loading = true;
 
            this.getToken();
@@ -85,17 +85,17 @@ export default {
 
             try {
                 const res = await axios.post("http://127.0.0.1:8000/login", {
-                    username: this.formData.username,
-                    password: this.formData.password,
-                    withCredentials: true
+                    name: this.formData.name,
+                    password: this.formData.password
                 }, {
                     headers: {
                         'X-CSRF-TOKEN': crfToken
-                    }
+                    },
+                    withCredentials: true
                 });
                 const token = await res.data.token;
                 axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-                // router.push("/dasboard");
+                this.$router.push("/dasboard");
                 alert('Login success!')
             this.loading = false;
             } catch (err) {

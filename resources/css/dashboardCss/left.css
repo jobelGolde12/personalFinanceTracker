@@ -1,12 +1,11 @@
 
-.left-body .link{
+.left-body .text-decoration-none{
     border-radius: 20px 0 0 20px;
     margin-left: .5 rem;
-
-}
-.left-body .link .text-decoration-none{
     font-size: .9rem;
+    display: block;
 }
-.left-body .link:hover{
+
+.left-body .text-decoration-none:hover{
     background: rgba(0, 0, 0, .1);
 }

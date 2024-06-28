@@ -40,6 +40,9 @@
                 <router-link class="btn btn-outline-success mt-2" to="/dashboard/">Back</router-link>
             </form>
         </div>
+
+
+        <router-link to="/dashboard">Back</router-link>
     </div>
 </template>
 

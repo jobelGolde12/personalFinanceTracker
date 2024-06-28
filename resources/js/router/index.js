@@ -17,7 +17,7 @@ const routes = [
         component: () => import('../components/welcome/SignupComponent.vue')
     },
     {
-        path: '/dashboard',
+        path: '/dashboard/',
         name: 'dashboard',
         component: () => import('../components/dashboardFolder/DashboardComponent.vue'),
         children: [

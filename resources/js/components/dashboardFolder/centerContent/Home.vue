@@ -89,6 +89,12 @@ export default {
             greetings: '',
             lightTheme: false,
             resentTransactionTableExpanded: false,
+                    props: {
+            userData: {
+            type: Object,
+            required: true
+            }
+        },
             resentTransactionsData: [{
                     "id": 1,
                     "date": "2024-06-22",
@@ -172,7 +178,9 @@ export default {
             ]
 
         }
+        
     },
+    
     methods: {
         getNetworthChart() {
             const data = {

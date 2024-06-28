@@ -2,7 +2,7 @@
     <div class="dashboard-main-container">
         <leftComponent class="left bg-light" />
         <div class="center bg-light">
-            <router-view></router-view>
+            <router-view ></router-view>
         </div>
         <rightComponent class="right"/>
     </div>
@@ -18,7 +18,13 @@ export default{
     name: 'dashboard',
     components: {
         leftComponent, centerComponent, rightComponent
-    }
+    },
+    computed: {
+    // userData() {
+    //   return JSON.parse(this.$route.query.user);
+    // }
+    // :userData="userData"
+  }
 }
 </script>
 <style scoped>
